@@ -1687,3 +1687,20 @@ section {
   background-image: url('icons/right-arrow.png'); /* Replace with your custom icon */
 }
 
+/* Base styles for video */
+#myVideo {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for screens wider than 768px */
+@media (min-width: 768px) {
+    #myVideo {
+        width: 30%; /* Smaller width on larger screens */
+        height: auto; /* Maintain aspect ratio */
+        position: absolute; /* Position it at a specific location */
+        top: 20px; /* 20px from the top */
+        right: 20px; /* 20px from the right */
+    }
+}
+
