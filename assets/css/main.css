@@ -1687,14 +1687,20 @@ section {
   background-image: url('icons/right-arrow.png'); /* Replace with your custom icon */
 }
 
-/* Styles for screens wider than 768px */
-@media (min-width: 768px) {
+/* Base styles for video */
+#myVideo {
+    width: 300px;  /* Fixed width */
+    height: auto;  /* Maintain aspect ratio */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Ensure it's not too large on smaller screens */
+@media (max-width: 768px) {
     #myVideo {
-        width: 30%; /* Smaller width on larger screens */
-        height: auto; /* Maintain aspect ratio */
-        position: absolute; /* Position it at a specific location */
-        top: 20px; /* 20px from the top */
-        right: 20px; /* 20px from the right */
+        position: static; /* Normal flow in small screens */
+        width: 100%; /* Take full width on smaller screens */
     }
 }
 
