@@ -1699,8 +1699,14 @@ section {
 /* Ensure it's not too large on smaller screens */
 @media (max-width: 768px) {
     #myVideo {
-        position: static; /* Normal flow in small screens */
-        width: 100%; /* Take full width on smaller screens */
+        position: static; /* Ensures the video is in the normal flow of the document */
+        width: 100%; /* Video will take full width of the container/screen */
+        height: auto; /* Maintain aspect ratio while adjusting the width */
+        max-height: 100%; /* Limit the maximum height to prevent overflow */
+        display: block; /* Display block to prevent unwanted margin/padding */
+        margin: 0 auto; /* Center-align the video if there is extra space horizontally */
+        overflow: hidden; /* Prevents any parts outside the specified area from being visible */
     }
 }
+
 
