@@ -274,6 +274,22 @@ document.addEventListener('DOMContentLoaded', () => {
   showSlide(currentIndex);
 });
 
+// script.js
+const acceptButton = document.getElementById('accept-cookies');
+const declineButton = document.getElementById('decline-cookies');
+const cookieBanner = document.querySelector('.cookie-banner');
+
+acceptButton.addEventListener('click', () => {
+    // Set cookies or perform other actions when cookies are accepted
+    console.log('Cookies accepted!');
+    cookieBanner.classList.add('fade-out');
+});
+
+declineButton.addEventListener('click', () => {
+    // Handle user action when cookies are declined
+    console.log('Cookies declined!');
+    cookieBanner.classList.add('fade-out');
+});
 
 
 
