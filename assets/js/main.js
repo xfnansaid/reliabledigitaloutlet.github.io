@@ -309,19 +309,21 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // whatsapp emabeded
-document.addEventListener('DOMContentLoaded', function () {
-  setTimeout(function () {
-      document.getElementById('chat-button').classList.remove('hidden');
-  }, 10000); // 10 seconds delay
+document.addEventListener('DOMContentLoaded', function() {
+  const chatButton = document.querySelector('.chat-button');
+  const chatPopup = document.querySelector('.chat-popup');
+  const closeChatPopupButton = document.querySelector('.close-chat-popup');
 
-  document.getElementById('chat-button').addEventListener('click', function () {
-      document.getElementById('chat-popup').style.display = 'flex';
-      this.classList.add('hidden');
+  setTimeout(() => {
+      chatButton.style.display = 'flex';
+  }, 10000);
+
+  chatButton.addEventListener('click', () => {
+      chatPopup.style.display = 'flex';
   });
 
-  document.getElementById('close-chat').addEventListener('click', function () {
-      document.getElementById('chat-popup').style.display = 'none';
-      document.getElementById('chat-button').classList.remove('hidden');
+  closeChatPopupButton.addEventListener('click', () => {
+      chatPopup.style.display = 'none';
   });
 });
 
