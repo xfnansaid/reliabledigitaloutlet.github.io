@@ -539,24 +539,35 @@
   }
 </style>
 
-<div id="chat-button" class="chat-button hidden">
+<button class="chat-button">
+  <i class="fas fa-comment-dots"></i>
+  Chat With Us
+</button>
 
-  <img src="img/aa2c2d2d-2f26-45ee-9d82-3bc02404c721.jpeg" alt="Bot Avatar" class="avatar">
-  <span>Chat With Us</span>
-</div>
-
-<div id="chat-popup" class="chat-popup hidden">
-  <div class="chat-header">
-    <img src="img/aa2c2d2d-2f26-45ee-9d82-3bc02404c721.jpeg" alt="Bot Avatar" class="avatar">
-      <span class="chat-title">Harper</span>
-      <button id="close-chat" class="close-chat">&times;</button>
+<div class="chat-popup">
+  <header>
+      <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="img/aa2c2d2d-2f26-45ee-9d82-3bc02404c721.jpeg" alt="Profile Picture"> <!-- Add your profile picture URL here -->
+          <div>
+              <h3>Harper</h3>
+              <span>Online</span>
+          </div>
+      </div>
+      <button class="close-chat-popup">&times;</button>
+  </header>
+  <div class="message">
+      <div class="text">
+          <p>🛒 Looking for the best offer?</p>
+          <p> 👀 I'm happy to tell you about our fantastic sale!!</p>
+      </div>
   </div>
-  <div class="chat-body">
-      <p>&#128722; Looking for the best offer? 👀 I'm happy to tell you about our fantastic sale!!</p>
-      <a id="whatsapp-link" href="https://wa.me/971523349786?text=Hey%20there!🛍️%20I'd love to explore your latest deals. Can you show me what's hot right now?%20~Directed from https://www.reliabledigitaloutlet.com !~" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50">
+  <footer>
+      <a href="https://wa.me/971523349786?text=Hey%20there!🛍️%20I'd love to explore your latest deals. Can you show me what's hot right now?%20~Directed from https://www.reliabledigitaloutlet.com !~" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
+          Chat on WhatsApp
       </a>
-  </div>
+  </footer>
 </div>
     
 
