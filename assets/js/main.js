@@ -309,22 +309,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // whatsapp emabeded
-document.addEventListener('DOMContentLoaded', function() {
-  const chatButton = document.querySelector('.chat-button');
-  const chatPopup = document.querySelector('.chat-popup');
-  const closeChatPopupButton = document.querySelector('.close-chat-popup');
+let lastScrollTop = 0;
+const chatButton = document.querySelector('.chat-button');
 
-  setTimeout(() => {
-      chatButton.style.display = 'flex';
-  }, 10000);
+window.addEventListener('scroll', function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    // Scroll down
+    chatButton.classList.add('hide');
+  } else {
+    // Scroll up
+    chatButton.classList.remove('hide');
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+});
 
-  chatButton.addEventListener('click', () => {
-      chatPopup.style.display = 'flex';
-  });
+document.querySelector('.chat-button').addEventListener('click', function() {
+  document.querySelector('.chat-popup').style.display = 'flex';
+});
 
-  closeChatPopupButton.addEventListener('click', () => {
-      chatPopup.style.display = 'none';
-  });
+document.querySelector('.close-chat-popup').addEventListener('click', function() {
+  document.querySelector('.chat-popup').style.display = 'none';
 });
 
 
