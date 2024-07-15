@@ -1754,13 +1754,13 @@ body {
   background-color: #25D366;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 50px;
   cursor: pointer;
   display: none;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  
   transition: background-color 0.3s ease;
   z-index: 9999; /* Ensure the button is on top */
 }
