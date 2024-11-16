@@ -1852,3 +1852,37 @@ body {
 .chat-popup footer a:hover {
   background-color: #1DA851;
 }
+
+
+/* Brand Logo */
+.brands-section {
+  background: linear-gradient(135deg, #f7f7f7, rgb(98, 168, 238));
+  padding: 40px 0;
+}
+
+
+.brands-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.brands-slider .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.brands-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+}
+
+.brands-slider .swiper-slide img {
+  max-width: 100%;
+  max-height: 60px; /* Adjust height for consistent sizing */
+  object-fit: contain;
+}
