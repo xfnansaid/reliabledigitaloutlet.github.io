@@ -327,6 +327,33 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+  // Brand Logo
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.brands-slider', {
+    speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 4,
+    spaceBetween: 20,
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+});
 
 
 
