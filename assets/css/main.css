@@ -1234,13 +1234,6 @@ section {
   width: 5%; /* Adjust width of clickable area */
 }
 
-.carousel-control-prev-icon {
-  background-image: url('icons/left-arrow.png'); /* Replace with your custom icon */
-}
-
-.carousel-control-next-icon {
-  background-image: url('icons/right-arrow.png'); /* Replace with your custom icon */
-}
 /* cookie */
 body {
   margin: 0;
