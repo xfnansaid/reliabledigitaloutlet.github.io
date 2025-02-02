@@ -28,6 +28,12 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   
@@ -46,6 +52,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <a href="" class="logo d-flex align-items-center me-auto me-lg-0">
+        <img src="img\Reliable Logo 2025.svg" alt="Reliable Digital Logo" class="me-2" style="height: auto;width: auto;">
         <h1>Reliable<span> Digital</span></h1>
     </a>
     
@@ -111,13 +118,6 @@
       </div>
     </div>
   </section><!-- End Hero Section -->
-
-  
-
-  <h2>Customer Reviews</h2>
-    <div id="reviews"></div>
-
-  
 
   <main id="main">
     <!-- ======= About Section ======= -->
@@ -347,61 +347,49 @@
 
     
 
-    <!-- ======= Events Section ======= -->
     <section id="Profile" class="events">
       <div class="container-fluid" data-aos="fade-up">
-
         <div class="section-header">
-          <h2>Profile</h2>
-          <p>Browse<span> Our Collection </span>At Reliable Digital</p>
+          <h2>APPLE</h2>
+          <p><span> CollectionS </span>At Reliable Digital</p>
         </div>
-
-        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+    
+        <!-- Swiper Container -->
+        <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/3.png)">
-              <h3></h3>
-              <div class="price align-self-start"></div>
-              <p class="description">
-              </p>
-            </div><!-- End Event item -->
-
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/2.png)">
-              <h3></h3>
-              <div class="price align-self-start"></div>
-              <p class="description">
-              </p>
-            </div><!-- End Event item -->
-
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/1.png)">
-              <h3></h3>
-              <div class="price align-self-start"></div>
-              <p class="description">
-              </p>
-            </div><!-- End Event item -->
-
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/IMG_1730.JPG)">
-              <h3>Sony Playstation 5 combo</h3>
-              <div class="price align-self-start">$Combo Offer Available</div>
-              <p class="description">
-                
-              </p>
-            </div><!-- End Event item -->
-
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(img/67ffd692-8e12-4d2d-af94-4228d618584f.JPG)">
+            <div class="swiper-slide event-item" style="background-image: url(https://www.apple.com/v/iphone-16-pro/d/images/overview/product-viewer/iphone-pro/all_colors__fdpduog7urm2_xlarge.jpg)">
+              <h3>iPhone 16 Pro</h3>
+              <div class="price">New Arrival</div>
+            </div>
+    
+            <div class="swiper-slide event-item" style="background-image: url(https://www.apple.com/v/ipad-10.9/d/images/overview/hero/hero__ecv967jz1y82_large.jpg)">
+              <h3>iPad 10 Gen</h3>
+              <div class="price">Limited Offer</div>
+            </div>
+    
+            <div class="swiper-slide event-item" style="background-image: url(https://www.apple.com/v/apple-watch-ultra-2/f/images/overview/even-more/connected__enpbxmoi1kya_large.jpg)">
+              <h3>Apple Watch Ultra 2</h3>
+              <div class="price">Best Seller</div>
+            </div>
+    
+            <div class="swiper-slide event-item" style="background-image: url(https://www.apple.com/v/airpods-max/h/images/overview/bento/blue/bento_1_airpod_max_blue__blqgkfdancya_xlarge.jpg)">
+              <h3>AirPods Max</h3>
+              <div class="price">Special Discount</div>
+            </div>
+    
+            <div class="swiper-slide event-item" style="background-image: url(img/67ffd692-8e12-4d2d-af94-4228d618584f.JPG)">
               <h3>Apple Vision Pro</h3>
-              <div class="price align-self-start">Offer Available</div>
-              <p class="description">
-                We are proud to announce that Reliable Digital was among the initial select retailers to introduce the Apple Vision Pro.
-              </p>
-            </div><!-- End Event item -->
-
+              <div class="price">Offer Available</div>
+              <p class="description">Reliable Digital was among the first to introduce the Apple Vision Pro.</p>
+            </div>
           </div>
+    
+          <!-- Pagination Dots -->
           <div class="swiper-pagination"></div>
         </div>
-
       </div>
-    </section><!-- End Events Section -->
+    </section>
+    <!-- End Events Section -->
 
     
 
@@ -597,6 +585,8 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
 
 <style>
   /* Tinting the carousel control icons */
