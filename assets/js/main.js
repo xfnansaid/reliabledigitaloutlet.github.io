@@ -393,41 +393,21 @@ dots.forEach((dot, index) => {
   });
 });
 
-
-const apiKey = 'AIzaSyB3cGevohcLHAIEHh4rcKO6qZKXAbUmMXw'; // Replace with your API key
-const placeId = 'ChIJv_sSUahkXz4RMvZ3YT_isaA'; // Replace with your Google Place ID
-
-async function fetchReviews() {
-    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=${apiKey}`;
-
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        if (data.result && data.result.reviews) {
-            displayReviews(data.result.reviews);
-        } else {
-            document.getElementById("reviews").innerHTML = "No reviews found.";
-        }
-    } catch (error) {
-        console.error("Error fetching reviews:", error);
-        document.getElementById("reviews").innerHTML = "Failed to load reviews.";
-    }
-}
-
-function displayReviews(reviews) {
-    const reviewsContainer = document.getElementById("reviews");
-    reviewsContainer.innerHTML = reviews.map(review => `
-        <div>
-            <p><strong>${review.author_name}</strong> (${review.rating} ★)</p>
-            <p>${review.text}</p>
-            <hr>
-        </div>
-    `).join('');
-}
-
-// Fetch reviews when the page loads
-fetchReviews();
+document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".mySwiper", {
+    loop: true, // Enables infinite scrolling
+    autoplay: {
+      delay: 8000, // 8 seconds per slide
+      disableOnInteraction: false, // Continues autoplay after manual navigation
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true, // Allows users to click on dots to navigate
+    },
+    effect: "fade", // Optional: Adds a smooth fade effect
+    speed: 800, // Transition speed (0.8 sec)
+  });
+});
 
 
 })();
