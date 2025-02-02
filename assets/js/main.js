@@ -353,6 +353,41 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     },
   });
+  /// Auto-play carousel functionality
+const reelsContainer = document.querySelector('.reels-container');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+
+// Function to move to a specific reel
+function moveToReel(index) {
+  currentIndex = index;
+  const reelWidth = reelsContainer.children[0].offsetWidth;
+  reelsContainer.scrollTo({
+    left: reelWidth * index,
+    behavior: 'smooth'
+  });
+  updateDots();
+}
+
+// Function to update active dot
+function updateDots() {
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentIndex);
+  });
+}
+
+// Auto-play every 5 seconds
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % dots.length;
+  moveToReel(currentIndex);
+}, 5000);
+
+// Dot click event listeners
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    moveToReel(index);
+  });
+});
 });
 
 
