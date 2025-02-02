@@ -556,7 +556,7 @@ section {
 --------------------------------------------------------------*/
 .about .about-img {
   min-height: 500px;
-  min-width: 500px;
+  min-width: 250px;
   background-size: contain; /* Ensures the image covers the div */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents image repetition */
@@ -787,69 +787,109 @@ section {
 
 .events .event-item {
   background-size: cover;
-  background-position: cente;
+  background-position: center;
   min-height: 600px;
   padding: 30px;
+  border-radius: 50px; /* Maintain curved effect */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Keep text at the bottom */
 }
 
+/* Mobile Adjustments */
 @media (max-width: 575px) {
   .events .event-item {
     min-height: 500px;
   }
 }
 
-.events .event-item:before {
+.events .event-item::before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4); /* Lightened overlay for readability */
   position: absolute;
   inset: 0;
+  z-index: 1;
+}
+
+/* Text Styling */
+.events .event-item h3,
+.events .event-item .price,
+.events .event-item .description {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
 .events .event-item h3 {
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 5px;
-  color: #fff;
-  position: relative;
 }
 
 .events .event-item .price {
-  color: #fff;
-  border-bottom: 2px solid var(--color-primary);
   font-size: 32px;
   font-weight: 700;
+  border-bottom: 2px solid var(--color-primary);
   margin-bottom: 15px;
-  position: relative;
 }
 
 .events .event-item .description {
-  margin-bottom: 0;
   color: rgba(255, 255, 255, 0.9);
-  position: relative;
 }
 
+/* Active Slide Borders */
 @media (min-width: 1200px) {
-  .events .swiper-slide-active+.swiper-slide {
+  .events .swiper-slide-active + .swiper-slide {
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     border-right: 1px solid rgba(255, 255, 255, 0.5);
     z-index: 1;
   }
 }
 
-.events .swiper-pagination {
-  margin-top: 20px;
+
+/* Swiper Styling */
+.events .swiper-slide {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 30px;
+  border-radius: 50px;
+  overflow: hidden;
   position: relative;
 }
 
+/* Ensure image fits within curved container */
+.events .swiper {
+  width: 90%;
+  max-width: 500px;
+  height: 600px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: auto;
+}
+
+/* Pagination Styling */
+.events .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+}
+
 .events .swiper-pagination .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: #d1d1d7;
+  width: 12px;
+  height: 12px;
+  background: #d1d1d7;
   opacity: 1;
 }
 
 .events .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--color-primary);
+  background: var(--color-primary);
 }
 
 
