@@ -1,0 +1,266 @@
+/* Colors */
+:root {
+    --color-primary: #0071E3; /* Bright blue for branding */
+    --color-secondary: #2C3E50; /* Deep navy for headings/accents */
+    --color-accent: #E3F2FD; /* Light blue for backgrounds/highlights */
+    --color-tertiary: #F5A623; /* Warm orange for CTAs */
+    --color-background: #F8F9FA; /* Light gray for sections */
+    --color-text: #333333; /* Medium gray for body text */
+    --color-error: #D32F2F; /* Soft red for errors */
+  }
+  
+  /* Animation Variables */
+  :root {
+    --animation-duration: 0.5s;
+    --animation-easing: ease-in-out;
+  }
+  /* Apply the font to the whole document */
+body {
+  font-family: var(--font-primary);
+}
+
+/* Specific font weights */
+h1, h2, h3 {
+  font-family: var(--font-primary);
+  font-weight: 700; /* Bold */
+}
+
+p, a, .terms-main p {
+  font-family: var(--font-primary);
+  font-weight: 400; /* Regular */
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: var(--font-primary); /* Using Open Sans as per your updated font */
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: rgb(0, 90, 181); /* Slightly darker shade for hover */
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header {
+  background: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Terms Container
+--------------------------------------------------------------*/
+.terms-container {
+  padding: 40px 0;
+  background: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*--------------------------------------------------------------
+# Terms Content
+--------------------------------------------------------------*/
+.terms-content {
+  display: flex;
+  gap: 40px;
+}
+
+.terms-sidebar {
+  width: 250px;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.terms-sidebar h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.terms-nav .nav-link {
+  display: block;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  border-left: 2px solid transparent;
+  transition: color 0.3s ease, border-left 0.3s ease;
+}
+
+.terms-nav .nav-link:hover,
+.terms-nav .nav-link.active {
+  color: var(--color-primary);
+  border-left: 2px solid var(--color-primary);
+}
+
+.terms-main {
+  flex: 1;
+  padding: 20px;
+}
+
+.terms-main h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.terms-main .last-updated {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.terms-main h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 30px 0 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.terms-main h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 20px 0 10px;
+}
+
+.terms-main p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.terms-main .disclaimer {
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  background: #1f1f24;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 30px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Responsive Design
+--------------------------------------------------------------*/
+@media (max-width: 1023px) {
+  .terms-content {
+    flex-direction: column;
+  }
+
+  .terms-sidebar {
+    width: 100%;
+    position: static;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .terms-main {
+    padding: 15px;
+  }
+
+  .terms-main h1 {
+    font-size: 24px;
+  }
+
+  .terms-main h2 {
+    font-size: 18px;
+  }
+
+  .terms-main h3 {
+    font-size: 14px;
+  }
+
+  .terms-main p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .terms-sidebar {
+    padding: 10px;
+  }
+
+  .terms-nav .nav-link {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+
+  .terms-main h1 {
+    font-size: 20px;
+  }
+
+  .terms-main h2 {
+    font-size: 16px;
+    margin: 25px 0 10px;
+  }
+
+  .terms-main h3 {
+    font-size: 14px;
+    margin: 15px 0 8px;
+  }
+
+  .terms-main p {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+}
