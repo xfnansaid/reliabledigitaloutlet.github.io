@@ -8,11 +8,16 @@
   <title>Reliable Digital Dubai</title>
   <meta content="Reliable Digital is your go-to place for cutting-edge electronics and unparalleled customer service. Discover our extensive range of products and services." name="description">
   <meta content="electronics, digital hub, tech store, customer service, latest technology" name="keywords">
-
+<!-- AOS Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   <!-- Favicons -->
   <link href="img\Reliable Logo.svg" rel="icon">
   <link href="img\Reliable Logo.svg" rel="apple-touch-icon">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://unpkg.com/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
   
@@ -37,8 +42,11 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   
-  
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   <!-- Chatbot-->
   <script> window.chtlConfig = { chatbotId: "1895258322" } </script>
   <script async data-id="1895258322" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
@@ -77,13 +85,14 @@
     </div>
   </header><!-- End Header -->
 
+  
   <!-- ======= Hero Section ======= -->
   <section id="Home" class="hero d-flex align-items-center section-bg">
     <div class="container">
       <div class="row justify-content-between gy-5">
         <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-          <h2 data-aos="fade-up">Your Digital Hub<br>Explore More</h2>
-          <p data-aos="fade-up" data-aos-delay="100">Unlock More Value With Our DIgital Hub.</p>
+          <h2 data-aos="fade-up">Your Digital Hub<br ></h2>
+          <p data-aos="fade-up" data-aos-delay="100">Unlock More Value</p>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
             <a href="#contact" class="btn-book-a-table">Find Us</a>
             <a href="forms/c5cfaab7-ada2-4ba1-ab69-a79012a310a6.MP4" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
@@ -93,16 +102,16 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="img\Untitled design (2).png" class="d-block w-100" alt="Slide 1">
+              <img src="img\Untitled design (2).png" class="d-block w-100" alt="Slide 1" loading="lazy">
             </div>
             <div class="carousel-item">
-              <img src="img\Page 1.png" class="d-block w-100" alt="Slide 3">
+              <img src="img\Page 1.png" class="d-block w-100" alt="Slide 1" loading="lazy">
             </div>
             <div class="carousel-item">
-              <img src="img\16 PRO MAX.png" class="d-block w-100" alt="Slide 3">
+              <img src="img\16 PRO MAX.png" class="d-block w-100" alt="Slide 1" loading="lazy">
             </div>
             <div class="carousel-item">
-              <img src="img\Page 6.jpeg" class="d-block w-100" alt="Slide 3">
+              <img src="img\Page 6.jpeg" class="d-block w-100" alt="Slide 1" loading="lazy">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -120,47 +129,40 @@
     </div>
   </section><!-- End Hero Section -->
 
+  
   <main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+  <!-- ======= About Section ======= -->
+<section id="about" class="about parallax-section">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h2>ABOUT US</h2>
+      <p>Learn More <span>About Us</span></p>
+    </div>
 
-        <div class="section-header">
-          <h2>About Us</h2>
-          <p>Learn More <span>About Us</span></p>
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-6 position-relative about-img" data-aos="fade-up" data-aos-delay="150">
+        <img src="img/IMG_2939 - Copy.jpg" alt="Reliable Digital Store Interior" loading="lazy" class="img-fluid">
+        <div class="call-us position-absolute">
+          <a href="#contact" class="btn-book-a-table interactive-btn">Contact Us</a>
+          <p class="contact-number">+971 52 334 9786</p>
         </div>
-
-        <div class="row gy-4">
-          <div class="col-lg-7 position-relative about-img" style="background-image: url(img/ce689090-e1e6-4898-84eb-9ac9aad45a60.svg) ;" data-aos="fade-up" data-aos-delay="150">
-            <div class="call-us position-absolute">
-              <a class="btn-book-a-table" href="#contact">Contact For Queries</a>
-              <p>+971 52 334 9786</p>
-            </div>
-          </div>
-          <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
-            <div class="content ps-0 ps-lg-5">
-              <p class="fst-italic">
-                Pioneers For Over Two Decades, We Are Reaching New Heights In The Tech Industry.
-              </p>
-              <div id="statement1" class="highlight-statement">
-                <p><i class="bi bi-check2-all"></i> At Reliable Digital, we are dedicated to delivering cutting-edge electronics and unmatched customer service.</p>
-              </div>
-              <div id="statement2" class="highlight-statement">
-                <p><i class="bi bi-check2-all"></i> Founded in 2003, our company has grown to become a trusted name in the electronics retail industry.</p>
-              </div>
-              <div id="statement3" class="highlight-statement">
-                <p><i class="bi bi-check2-all"></i> Our mission is to empower our customers by providing the latest in electronics, coupled with knowledgeable assistance and unparalleled service. We strive to stay at the forefront of technology trends, ensuring our customers always have access to the best products available.</p>
-              </div>
-              <p>
-                Our vision is to be recognized as the leading electronics retailer that continuously enhances customer experiences and drives technology forward. We aim to expand our reach globally while maintaining the quality and service that our customers have come to expect.
-              </p>
-            </div>
-          </div>
-          
-        </div>
-
       </div>
-    </section><!-- End About Section -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="content">
+          <p class="tagline fst-italic">Pioneers for Over 20 Years</p>
+          <ul class="key-points">
+            <li><i class="bi bi-check2-all"></i> Cutting-edge electronics & top service</li>
+            <li><i class="bi bi-check2-all"></i> Founded in 2003, a trusted name</li>
+            <li><i class="bi bi-check2-all"></i> Empowering customers with innovation</li>
+          </ul>
+          <p class="vision">Our vision: Lead tech retail globally with quality.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- End About Section -->
+
+
 
     <!--Brandlogo temp-->
     <section id="brands" class="brands-section">
@@ -236,7 +238,7 @@
   
           <div class="section-header">
               <h2>Gallery</h2>
-              <p>Check <span>Our Inventory</span></p>
+              <p>In<span>ventory</span></p>
           </div>
   
           <div class="gallery-slider swiper">
@@ -290,64 +292,60 @@
 
 
     <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us section-bg">
-      <div class="container" data-aos="fade-up">
+<section id="why-us" class="why-us section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="row gy-4">
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-box">
+          <h3>Why Choose Reliable Digital?</h3>
+          <p>Expert guidance, top-tier service, and the latest technology—all in one place. Elevate your shopping experience with us.</p>
+          <div class="text-center">
+            <a href="forms/PPT - Fast and reliable gadgets RELIABLE DIGITAL.pdf" class="more-btn">Explore Now <i class="bx bx-chevron-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Why Box -->
 
+      <div class="col-lg-8 d-flex align-items-center">
         <div class="row gy-4">
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="why-box">
-              <h3>Why Choose Reliable Digital?</h3>
-              <p>
-                Opt for Reliable Digital for unparalleled quality and expert guidance. With over two decades of experience, we excel in providing the latest technology solutions. Our commitment to innovation and customer satisfaction ensures you receive top-tier service and cutting-edge products tailored to meet your needs. Experience a superior shopping journey with us.
-              </p>
-              <div class="text-center">
-                <a href="forms\PPT - Fast and reliable gadgets RELIABLE DIGITAL.pdf" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-              </div>
+          <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <i class="bi bi-clipboard-data"></i>
+              <h4>Expert Guidance</h4>
+              <p>Get advice from experienced professionals.</p>
             </div>
-          </div><!-- End Why Box -->
+          </div><!-- End Icon Box -->
 
-          <div class="col-lg-8 d-flex align-items-center">
-            <div class="row gy-4">
-
-              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <i class="bi bi-clipboard-data"></i>
-                  <h4>Expert Guidance: </h4>
-                  <p>Our team of experienced professionals is always available to help you make informed decisions about the best products to meet your needs.</p>
-                </div>
-              </div><!-- End Icon Box -->
-
-              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <i class="bi bi-gem"></i>
-                  <h4>Top-Tier Service: </h4>
-                  <p>We pride ourselves on our commitment to customer satisfaction, ensuring a seamless shopping experience from start to finish.</p>
-                </div>
-              </div><!-- End Icon Box -->
-
-              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <i class="bi bi-inboxes"></i>
-                  <h4>Innovative Solutions: </h4>
-                  <p>We stay ahead of technology trends, offering the latest products that combine advanced features with user-friendly functionality.</p>
-                </div>
-              </div><!-- End Icon Box -->
-
+          <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <i class="bi bi-gem"></i>
+              <h4>Top-Tier Service</h4>
+              <p>Seamless and satisfying shopping experience.</p>
             </div>
-          </div>
+          </div><!-- End Icon Box -->
+
+          <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-box">
+              <i class="bi bi-inboxes"></i>
+              <h4>Innovative Solutions</h4>
+              <p>Stay ahead with the latest tech trends.</p>
+            </div>
+          </div><!-- End Icon Box -->
 
         </div>
-
       </div>
-    </section><!-- End Why Us Section -->
+
+    </div>
+  </div>
+</section><!-- End Why Us Section -->
+
 
     
 
     
 
     
-
+      <!--  Events Section -->
     <section id="Profile" class="events">
       <div class="container-fluid" data-aos="fade-up">
         <div class="section-header">
@@ -516,7 +514,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="copyright">
-                    &copy; <a href="Terms AND Conditions Upd-2025.html">Copyright</a>  <strong><span>reliabledigitaloutlet</span></strong>. All Rights Reserved
+                    &copy; <a href="T&C.html">Copyright</a>  <strong><span>reliabledigitaloutlet</span></strong>. All Rights Reserved
                 </div>
                 <div class="credits">
                     Designed by <a href="https://www.instagram.com/xfn.an_said/">Mohd Afnan</a>
@@ -529,10 +527,10 @@
   <!-- End Footer -->
 
   <div class="cookie-consent">
-    <div class="cookie-message">
-        <p>&#127850; We use cookie to improve your experience on our site. By using our site you consent cookies <a href="Terms AND Conditions Upd-2025.html">Cookie Policy</a>.</p>
-        <button class="cookie-button">Accept</button>
-    </div>
+  <div class="cookie-message">
+    <p>We use cookies to improve your experience on our site. By using our site, you consent to our <a href="T&C.html">Cookie Policy</a>.</p>
+    <button class="cookie-button">Accept</button>
+  </div>
 </div>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
