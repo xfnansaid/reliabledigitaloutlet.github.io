@@ -410,4 +410,59 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.hero-slider', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: { delay: 5000 }, // Auto-slide every 5 seconds
+    breakpoints: {
+      1024: { height: 500 },
+      768: { height: 400 },
+      320: { height: 300 },
+    },
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const keyPoints = document.querySelectorAll('.key-point');
+  let currentIndex = 0;
+  let animationRunning = true;
+
+  function highlightPoint() {
+    // Remove highlight from all points
+    keyPoints.forEach(point => point.classList.remove('highlight'));
+
+    // Highlight the current point
+    keyPoints[currentIndex].classList.add('highlight');
+
+    // Move to the next point
+    currentIndex = (currentIndex + 1) % keyPoints.length;
+
+    // Stop after 15 seconds (optional, remove if you want continuous looping)
+    setTimeout(() => {
+      if (animationRunning) {
+        setTimeout(highlightPoint, 3000); // Change to 3000ms (3 seconds) for each highlight
+      } else {
+        keyPoints.forEach(point => point.classList.remove('highlight')); // Clear highlights when stopping
+      }
+    }, 3000); // Wait 3 seconds before highlighting the next point
+  }
+
+  // Start the animation
+  highlightPoint();
+
+  // Optional: Stop the animation after 15 seconds
+  setTimeout(() => {
+    animationRunning = false;
+  }, 15000); // Stop after 15 seconds
+});
+
+
+
 })();
