@@ -14,6 +14,7 @@
 <script>
   AOS.init();
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Favicons -->
   <link href="img\Reliable Logo.svg" rel="icon">
   <link href="img\Reliable Logo.svg" rel="apple-touch-icon">
@@ -131,8 +132,8 @@
 
   
   <main id="main">
-  <!-- ======= About Section ======= -->
-<section id="about" class="about parallax-section">
+ <!-- ======= About Section ======= -->
+ <section id="about" class="about parallax-section">
   <div class="container" data-aos="fade-up">
     <div class="section-header">
       <h2>ABOUT US</h2>
@@ -141,9 +142,9 @@
 
     <div class="row gy-4 align-items-center">
       <div class="col-lg-6 position-relative about-img" data-aos="fade-up" data-aos-delay="150">
-        <img src="img/IMG_2939 - Copy.jpg" alt="Reliable Digital Store Interior" loading="lazy" class="img-fluid">
+        <img src="img/IMG_2939 - Copy.jpg" alt="Interior of Reliable Digital Store" loading="lazy" class="img-fluid">
         <div class="call-us position-absolute">
-          <a href="#contact" class="btn-book-a-table interactive-btn">Contact Us</a>
+          <a href="#contact" class="btn-book-a-table interactive-btn" aria-label="Contact Reliable Digital Store">Contact Us</a>
           <p class="contact-number">+971 52 334 9786</p>
         </div>
       </div>
@@ -167,22 +168,26 @@
     <!--Brandlogo temp-->
     <section id="brands" class="brands-section">
       <div class="container">
-        <p>Premium Brands <span>We Offer</span></p>
+        <h2 class="brands-title">Premium Brands <span>We Curate</span></h2>
         <div class="swiper brands-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Brand 1">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple logo" class="brand-logo">
             </div>
             <div class="swiper-slide">
-              <img src="https://www.svgrepo.com/show/443015/brand-dji.svg" alt="Brand 2">
+              <img src="https://www.svgrepo.com/show/443015/brand-dji.svg" alt="DJI logo" class="brand-logo">
             </div>
             <div class="swiper-slide">
-              <img src="https://www.svgrepo.com/show/443435/brand-sony.svg" alt="Brand 3">
+              <img src="https://www.svgrepo.com/show/443435/brand-sony.svg" alt="Sony logo" class="brand-logo">
             </div>
             <div class="swiper-slide">
-              <img src="https://www.svgrepo.com/show/330043/beatsbydre.svg" alt="Brand 1">
+              <img src="https://www.svgrepo.com/show/330043/beatsbydre.svg" alt="Beats by Dre logo" class="brand-logo">
             </div>
           </div>
+          <!-- Add navigation and pagination with custom styling -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -233,56 +238,48 @@
     </div>
 
     <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery section-bg">
-      <div class="container" data-aos="fade-up">
-  
-          <div class="section-header">
-              <h2>Gallery</h2>
-              <p>In<span>ventory</span></p>
+<section id="gallery" class="gallery section-bg">
+  <canvas id="particles-js"></canvas> <!-- Particle background -->
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h2>Gallery</h2>
+    </div>
+
+    <div class="gallery-masonry">
+      <div class="gallery-item">
+        <div class="gallery-card">
+          <img src="img/PHOTO-2024-03-30-23-11-33 14.jpg" class="gallery-img" alt="Reliable Digital Store Inventory - PHOTO-2024-03-30-23-11-33 14" loading="lazy">
+          <div class="gallery-overlay">
           </div>
-  
-          <div class="gallery-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-                  <div class="swiper-slide">
-                      <a class="glightbox" data-gallery="images-gallery" href="img/IMG_2939.jpg">
-                          <img src="img/IMG_2939.jpg" class="img-fluid" alt="Description of IMG_2939">
-                      </a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a class="glightbox" data-gallery="images-gallery" href="img/PHOTO-2024-04-09-15-44-59.jpg">
-                          <img src="img/PHOTO-2024-04-09-15-44-59.jpg" class="img-fluid" alt="Description of PHOTO-2024-04-09-15-44-59">
-                      </a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a class="glightbox" data-gallery="images-gallery" href="img/PHOTO-2024-03-30-23-11-33 9.jpg">
-                          <img src="img/PHOTO-2024-03-30-23-11-33 9.jpg" class="img-fluid" alt="Description of PHOTO-2024-03-30-23-11-33 9">
-                      </a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a class="glightbox" data-gallery="images-gallery" href="img/PHOTO-2024-03-30-23-11-33 14.jpg">
-                          <img src="img/PHOTO-2024-03-30-23-11-33 14.jpg" class="img-fluid" alt="Description of PHOTO-2024-03-30-23-11-33 14">
-                      </a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a class="glightbox" data-gallery="images-gallery" href="img/PHOTO-2024-03-30-23-11-33 12.jpgg">
-                          <img src="img/PHOTO-2024-03-30-23-11-33 12.jpg" class="img-fluid" alt="Description of PHOTO-2024-03-30-23-11-33 12">
-                      </a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a class="glightbox" data-gallery="images-gallery" href="img/PHOTO-2024-03-30-23-11-33 13.jpg">
-                          <img src="img/PHOTO-2024-03-30-23-11-33 13.jpg" class="img-fluid" alt="Description of PHOTO-2024-03-30-23-11-33 13">
-                      </a>
-                  </div>
-                  <div class="swiper-slide">
-                      <a class="glightbox" data-gallery="images-gallery" href="img/IMG_2761.jpg">
-                          <img src="img/IMG_2761.jpg" class="img-fluid" alt="Description of IMG_2761">
-                      </a>
-                  </div>
-              </div> <!-- Closing swiper-wrapper -->
-          </div> <!-- Closing swiper -->
-      </div> <!-- Closing container -->
-  </section>
-  <!-- End Gallery Section -->
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-card">
+          <img src="img/PHOTO-2024-03-30-23-11-33 12.jpg" class="gallery-img" alt="Reliable Digital Store Inventory - PHOTO-2024-03-30-23-11-33 12" loading="lazy">
+          <div class="gallery-overlay">
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-card">
+          <img src="img/PHOTO-2024-03-30-23-11-33 9.jpg" class="gallery-img" alt="Reliable Digital Store Inventory - PHOTO-2024-03-30-23-11-33 9" loading="lazy">
+          <div class="gallery-overlay">
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-card">
+          <img src="img/PHOTO-2024-03-30-23-11-33 13.jpg" class="gallery-img" alt="Reliable Digital Store Inventory - PHOTO-2024-03-30-23-11-33 13" loading="lazy">
+          <div class="gallery-overlay">
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+  </div>
+</section><!-- End Gallery Section -->
 
 
 
@@ -350,7 +347,7 @@
       <div class="container-fluid" data-aos="fade-up">
         <div class="section-header">
           <h2>APPLE</h2>
-          <p><span> CollectionS </span>At Reliable Digital</p>
+
         </div>
     
         <!-- Swiper Container -->
@@ -505,7 +502,7 @@
                 <h4>Follow Us</h4>
                 <div class="social-links d-flex">
                     <a href="https://www.facebook.com/relaibledigital/" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="https://www.instagram.com/relaibledigitaldubai/?igsh=eXU2eWJhcXNvcmdv" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/reliabledigitaldubai?igsh=MTM4MjB3cGQxcWw0Zw%3D%3D&utm_source=qr " class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -601,36 +598,7 @@
   }
 </style>
 
-<button class="chat-button">
-  <i class="fas fa-comment-dots"></i>
-  <img src="https://img.icons8.com/?size=100&id=16713&format=png&color=000000" alt="WhatsApp" width="30">
-</button>
 
-<div class="chat-popup">
-  <header>
-      <div style="display: flex; align-items: center; gap: 10px;">
-          <img src="img/aa2c2d2d-2f26-45ee-9d82-3bc02404c721.jpeg" alt="Profile Picture"> <!-- Add your profile picture URL here -->
-          <div>
-              <h3>Harper</h3>
-              <span>Online</span>
-          </div>
-      </div>
-      <button class="close-chat-popup">&times;</button>
-  </header>
-  <div class="message">
-      <div class="text">
-          <p>🛒 Seeking the best deals?</p>
-          <p> 👀 We are excited to share our exclusive offers with you!</p>
-      </div>
-  </div>
-  <footer>
-      <a href="https://wa.me/971523349786?" target="_blank">
-          <i class="fab fa-whatsapp"></i>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
-          Chat on WhatsApp
-      </a>
-  </footer>
-</div>
 
 
     
