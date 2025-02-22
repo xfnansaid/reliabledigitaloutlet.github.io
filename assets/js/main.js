@@ -195,35 +195,36 @@
   /**
    * Gallery Slider
    */
-  new Swiper('.gallery-slider', {
-    speed: 400,
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
+// Particle Background
+document.addEventListener('DOMContentLoaded', () => {
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 } },
+      color: { value: '#00d2ff' },
+      shape: { type: 'circle' },
+      opacity: { value: 0.5, random: true },
+      size: { value: 3, random: true },
+      line_linked: { enable: true, distance: 150, color: '#00d2ff', opacity: 0.4, width: 1 },
+      move: { enable: true, speed: 2, direction: 'none', random: true, straight: false, out_mode: 'out' }
     },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
+    interactivity: {
+      detect_on: 'canvas',
+      events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+      modes: { repulse: { distance: 100, duration: 0.4 } }
     },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      },
-      992: {
-        slidesPerView: 5,
-        spaceBetween: 20
-      }
-    }
+    retina_detect: true
   });
+
+
+
+  // AOS Animation Initialization
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false
+  });
+});
 
   /**
    * Animation on scroll function and init
@@ -328,33 +329,40 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
   // Brand Logo
-document.addEventListener('DOMContentLoaded', function () {
-  new Swiper('.brands-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
+// Initialize Swiper
+const swiper = new Swiper('.brands-slider', {
+  slidesPerView: 4, // Show 4 slides on desktop
+  spaceBetween: 40, // More spacing for premium feel
+  loop: true, // Infinite loop
+  autoplay: {
+    delay: 2500, // 2.5 seconds per slide
+    disableOnInteraction: false, // Continue autoplay after interaction
+  },
+  speed: 800, // Smoother transitions
+  parallax: true, // Enable parallax effect (optional, requires additional setup)
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    320: { // Mobile
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
-    slidesPerView: 4,
-    spaceBetween: 20,
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 15,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
+    768: { // Tablet
+      slidesPerView: 3,
+      spaceBetween: 30,
     },
-  });
+    1024: { // Desktop
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+  },
 });
-
 
 
 /// Auto-play carousel functionality
@@ -429,40 +437,49 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const keyPoints = document.querySelectorAll('.key-point');
-  let currentIndex = 0;
-  let animationRunning = true;
+AOS.init();
 
-  function highlightPoint() {
-    // Remove highlight from all points
-    keyPoints.forEach(point => point.classList.remove('highlight'));
+    document.addEventListener('DOMContentLoaded', function () {
+      const keyPoints = document.querySelectorAll('.key-points li');
+      let currentIndex = 0;
+      let animationRunning = true;
 
-    // Highlight the current point
-    keyPoints[currentIndex].classList.add('highlight');
+      function animatePoints() {
+        keyPoints.forEach((point, index) => {
+          point.style.opacity = 0; // Reset opacity
+          point.classList.remove('active');
+        });
 
-    // Move to the next point
-    currentIndex = (currentIndex + 1) % keyPoints.length;
+        function showNextPoint() {
+          if (!animationRunning) return;
 
-    // Stop after 15 seconds (optional, remove if you want continuous looping)
-    setTimeout(() => {
-      if (animationRunning) {
-        setTimeout(highlightPoint, 3000); // Change to 3000ms (3 seconds) for each highlight
-      } else {
-        keyPoints.forEach(point => point.classList.remove('highlight')); // Clear highlights when stopping
+          if (currentIndex < keyPoints.length) {
+            keyPoints[currentIndex].style.opacity = 1;
+            keyPoints[currentIndex].classList.add('active');
+            currentIndex++;
+            setTimeout(showNextPoint, 2000); // 2 seconds per point
+          } else {
+            currentIndex = 0; // Loop back to start
+            setTimeout(showNextPoint, 2000); // Pause before restarting
+          }
+        }
+
+        showNextPoint();
       }
-    }, 3000); // Wait 3 seconds before highlighting the next point
-  }
 
-  // Start the animation
-  highlightPoint();
+      // Start the animation
+      animatePoints();
 
-  // Optional: Stop the animation after 15 seconds
-  setTimeout(() => {
-    animationRunning = false;
-  }, 15000); // Stop after 15 seconds
-});
+      // Optional: Stop the animation after 15 seconds
+      setTimeout(() => {
+        animationRunning = false;
+        keyPoints.forEach(point => {
+          point.style.opacity = 1; // Ensure all points are visible when animation stops
+          point.classList.remove('active');
+        });
+      }, 15000); // Stop after 15 seconds
+    });
 
-
-
+    
+    
 })();
